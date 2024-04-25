@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_spacing">32dp</dimen>
+    <dimen name="plate_spacing">170dp</dimen>
+    <dimen name="bigger_spacing">62dp</dimen>
+    <dimen name="smaller_spacing">16dp</dimen>
+</resources>

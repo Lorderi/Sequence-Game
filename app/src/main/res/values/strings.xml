@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">SequenceGame</string>
+    <string name="one_plate_text">1</string>
+    <string name="second_plate_text">2</string>
+    <string name="third_plate_text">3</string>
+    <string name="fourth_plate_text">4</string>
+    <string name="level_label">Level: </string>
+    <string name="record_label">Record: </string>
+    <string name="new_game">New Game</string>
+    <string name="free_play">Free Play</string>
+    <string name="about">About</string>
+    <string name="sound">Sound: </string>
+    <string name="sound_on">Sound: ON</string>
+    <string name="sound_off">Sound: OFF</string>
+    <string name="delay">Delay between sounds in a chain (ms)</string>
+    <string name="button_highlight">Button highlight: </string>
+    <string name="button_highlight_on">Button highlight: ON</string>
+    <string name="button_highlight_off">Button highlight: OFF</string>
+    <string name="voices_themes">Choose voices themes</string>
+    <string name="record_text">Record: </string>
+    <string name="record_value_text">Record: %s</string>
+    <string name="about_author">About the author:\nlorderi 2024</string>
+    <string name="settings">Settings</string>
+    <string name="starting_at">Starting at: </string>
+    <string name="text_zero">0</string>
+    <string name="text_seconds">3</string>
+    <string name="hardmode_text">Hardmode:</string>
+    <string name="hardmode_text_on">Hardmode: ON</string>
+    <string name="hardmode_text_off">Hardmode: OFF</string>
+    <string name="hardmode_label">Hardmode:</string>
+    <string name="sound_label">Sound:</string>
+    <string name="delay_label">Delay:</string>
+    <string name="delay_value_label">Delay: %s ms</string>
+    <string name="button_highlight_label">Button highlight:</string>
+    <string name="voices_label">Voices:</string>
+    <string name="voices_value_label">Voices: %s</string>
+</resources>

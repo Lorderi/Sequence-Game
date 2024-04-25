@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_spacing"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".fragment.AboutFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/record"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:gravity="center"
+            android:text="@string/record_text" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sound"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:gravity="center"
+            android:text="@string/sound_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/delay"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:gravity="center"
+            android:text="@string/delay_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/voices"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:gravity="center"
+            android:text="@string/voices_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/highlight"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:gravity="center"
+            android:text="@string/button_highlight_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hardmode"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:gravity="center"
+            android:text="@string/hardmode_label" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/about_author"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bigger_spacing"
+            android:layout_marginBottom="@dimen/bigger_spacing"
+            android:gravity="center"
+            android:text="@string/about_author" />
+
+    </LinearLayout>
+
+</ScrollView>

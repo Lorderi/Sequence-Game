@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".fragment.PlayFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/level"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:layout_marginEnd="@dimen/smaller_spacing"
+            android:layout_marginBottom="@dimen/common_spacing"
+
+            android:text="@string/level_label"
+            app:layout_constraintBottom_toTopOf="@id/all_info"
+            app:layout_constraintEnd_toStartOf="@id/level_text"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/level_text"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:layout_marginEnd="@dimen/common_spacing"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:text="@string/text_zero"
+            app:layout_constraintBottom_toTopOf="@id/all_info"
+            app:layout_constraintEnd_toStartOf="@id/record"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/level"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/record"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:layout_marginEnd="@dimen/smaller_spacing"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:text="@string/record_label"
+            app:layout_constraintBottom_toTopOf="@id/all_info"
+            app:layout_constraintEnd_toStartOf="@id/record_text"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/level_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/record_text"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:layout_marginEnd="@dimen/common_spacing"
+            android:layout_marginBottom="@dimen/common_spacing"
+            android:text="@string/text_zero"
+            app:layout_constraintBottom_toTopOf="@id/all_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/record"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/start_game"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:layout_marginEnd="@dimen/smaller_spacing"
+            android:text="@string/starting_at"
+            app:layout_constraintBottom_toTopOf="@id/all_info"
+            app:layout_constraintEnd_toStartOf="@id/start_game_text"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/level" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/start_game_text"
+            style="@style/TextAppearance.Material3.BodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_spacing"
+            android:text="@string/text_seconds"
+            app:layout_constraintBottom_toTopOf="@id/all_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/start_game"
+            app:layout_constraintTop_toBottomOf="@id/level" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/all_info"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="start_game, start_game_text" />
+
+        <GridLayout
+            android:id="@+id/plates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:useDefaultMargins="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/all_info">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/first_plate"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="@dimen/plate_spacing"
+                android:layout_height="@dimen/plate_spacing"
+
+                android:text="@string/one_plate_text"
+                app:backgroundTint="@color/light_purple"
+                app:layout_constraintBottom_toTopOf="@id/third_plate"
+                app:layout_constraintEnd_toStartOf="@id/second_plate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/all_info" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/second_plate"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="@dimen/plate_spacing"
+                android:layout_height="@dimen/plate_spacing"
+                android:gravity="center"
+                android:text="@string/second_plate_text"
+                app:backgroundTint="@color/light_orange"
+                app:layout_constraintBottom_toTopOf="@id/fourth_plate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/first_plate"
+                app:layout_constraintTop_toBottomOf="@id/all_info" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/third_plate"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="@dimen/plate_spacing"
+                android:layout_height="@dimen/plate_spacing"
+                android:gravity="center"
+                android:text="@string/third_plate_text"
+                app:backgroundTint="@color/light_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fourth_plate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_plate" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fourth_plate"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="@dimen/plate_spacing"
+                android:layout_height="@dimen/plate_spacing"
+                android:gravity="center"
+                android:text="@string/fourth_plate_text"
+                app:backgroundTint="@color/light_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/third_plate"
+                app:layout_constraintTop_toBottomOf="@id/second_plate" />
+        </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

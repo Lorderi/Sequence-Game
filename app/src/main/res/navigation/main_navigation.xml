@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="ru.lorderi.sequencegame.fragment.StartFragment"
+        android:label="Repeat the sequence"
+        tools:layout="@layout/start_fragment">
+        <action
+            android:id="@+id/action_startFragment_to_playFragment"
+            app:destination="@id/play_fragment" />
+        <action
+            android:id="@+id/action_startFragment_to_freePlayFragment"
+            app:destination="@id/free_play_fragment" />
+        <action
+            android:id="@+id/action_startFragment_to_settingsFragment"
+            app:destination="@id/settings_fragment" />
+        <action
+            android:id="@+id/action_startFragment_to_aboutFragment"
+            app:destination="@id/about_fragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/free_play_fragment"
+        android:name="ru.lorderi.sequencegame.fragment.PlayFragment"
+        android:label="Free play"
+        tools:layout="@layout/play_fragment" />
+
+    <fragment
+        android:id="@+id/play_fragment"
+        android:name="ru.lorderi.sequencegame.fragment.PlayFragment"
+        android:label="New game"
+        tools:layout="@layout/play_fragment">
+        <action
+            android:id="@+id/action_play_fragment_to_dialogFragment"
+            app:destination="@id/dialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="ru.lorderi.sequencegame.fragment.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/settings_fragment" />
+    <fragment
+        android:id="@+id/about_fragment"
+        android:name="ru.lorderi.sequencegame.fragment.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/about_fragment" />
+    <dialog
+        android:id="@+id/dialogFragment"
+        android:name="ru.lorderi.sequencegame.fragment.DialogFragment"
+        android:label="DialogFragment" />
+
+</navigation>
