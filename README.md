@@ -21,20 +21,20 @@ development in a separate branch.
 - Incorrectly pressing a button results in a game loss.
 - The top result is saved using shared preferences.
 
-  ![Basic game](record/new_game_record.gif)
+  <img src="record/new_game_record.gif" alt="Basic game" width="300">
 
 ## Free Play
 
 - Added "Free Play" mode accessible from the menu.
 - In Free Play mode, sequences are not played, and there's no level counter.
 
-  ![Free Play](record/free_game.png)
+  <img src="record/free_game.png" alt="Free Play" width="300">
 
 ## Menu
 
 - Added a menu with options for "New Game", "Free play", "Settings", "About".
 
-  ![Menu](record/main_screen.png)
+  <img src="record/main_screen.png" alt="Menu" width="300">
 
 - "New Game" launches the main game.
 - "Settings" menu item with options for sound toggle, delay adjustment, disable/enable button
@@ -42,11 +42,11 @@ development in a separate branch.
 - Sound can be turned on/off.
 - Delay between sounds can be adjusted using a slider.
 
-  ![Settings](record/settings_screen.png)
+  <img src="record/settings_screen.png" alt="Settings" width="300">
 
 - "About" displays information about the game and the author.
 
-  ![About](record/about_screen.png)
+  <img src="record/about_screen.png" alt="About" width="300">
 
 ## Branches
 
