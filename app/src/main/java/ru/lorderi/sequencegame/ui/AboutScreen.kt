@@ -17,6 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import ru.lorderi.sequencegame.ui.util.getFormattedLabel
 import ru.lorderi.sequencegame.viewmodel.PlatesViewModel
 
 @Composable
@@ -36,7 +37,7 @@ fun AboutScreen(
         Text(text = "Record: ${plate.record}", modifier = Modifier.padding(bottom = 16.dp))
 
         Text(
-            text = "Sound: ${getEnableLabel(plate.sound)}",
+            text = "Sound: ${getFormattedLabel(plate.sound)}",
             modifier = Modifier.padding(bottom = 16.dp)
         )
         Text(
@@ -46,24 +47,14 @@ fun AboutScreen(
         Text(text = "Voices: ${plate.soundThemes}", modifier = Modifier.padding(bottom = 16.dp))
 
         Text(
-            text = "Button highlight: ${getEnableLabel(plate.highlight)}",
+            text = "Button highlight: ${getFormattedLabel(plate.highlight)}",
             modifier = Modifier.padding(bottom = 16.dp)
         )
-        Text(text = "Hardmode: ${getEnableLabel(plate.hardMode)}")
+        Text(text = "Hardmode: ${getFormattedLabel(plate.hardMode)}")
         Spacer(modifier = Modifier.height(32.dp))
         Text(text = "About the author:\nlorderi 2024", textAlign = TextAlign.Center)
     }
 }
-
-fun getEnableLabel(state: Boolean): String {
-    val value = if (state) {
-        "ON"
-    } else {
-        "OFF"
-    }
-    return value
-}
-
 @Preview(
     showSystemUi = true, showBackground = true,
     device = "id:pixel_3a"

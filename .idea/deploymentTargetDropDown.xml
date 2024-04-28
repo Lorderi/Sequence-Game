@@ -5,6 +5,12 @@
       <entry key="AboutScreenPreview">
         <State />
       </entry>
+      <entry key="PlayScreenPreview">
+        <State />
+      </entry>
+      <entry key="SettingsScreenPreview">
+        <State />
+      </entry>
       <entry key="app">
         <State />
       </entry>
